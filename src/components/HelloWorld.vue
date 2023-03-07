@@ -1,7 +1,10 @@
 <template>
+
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <button  @click="toLogin">登入接页面</button>
+
+     <button @click="toLogin">登入接页面</button>
+
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -32,7 +35,7 @@
 </template>
 
 <script>
-import router from "@/router";
+import router from "../router/index.js";
 
 export default {
   name: 'HelloWorld',
@@ -42,12 +45,12 @@ export default {
 ,
 methods:{
   toLogin(){
- //   alert('提交成功');
+    //alert('提交成功');
     //直接跳转
-   // router.push('/Login');
+    router.push('/login');
 
     //带参数跳转
-    router.push({path:'/Login',query:{setid:123456}});
+   // router.push({path:'/login',query:{setid:123456}});
 
   }
     // this.$refs.loginForm.validate((valid) => {

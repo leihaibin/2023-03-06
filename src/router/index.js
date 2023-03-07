@@ -1,15 +1,29 @@
-//import Vue from 'vue'
-import VueRouter from "vue-router"
-import Login from '../views/Login.vue'
+import { createRouter,createWebHistory} from "vue-router";
+import HelloWorld from "../components/HelloWorld.vue";
+import Login from "../views/Login.vue";
+const routes = [
+    {
+        path: '/home',
+        name: 'HelloWorld',
+        component: HelloWorld
+    },
+    // {
+    //     path: "/home",
+    //     name: "home",
+    //     component: home
+    // },
+    {
+        path: "/login",
+        name: "login",
+        component: Login
+        //component: () => import('../views/Login.vue')
+    },
 
-//Vue.createApp(VueRouter)
+]
 
-const routes =[{
-    path:"/",
-    name:"Login",
-    component:Login
-}]
-const router =new VueRouter.createRouter({
-    routes
+const  router = createRouter({
+    history: createWebHistory(),
+    routes: routes,
+
 })
-export default router;
+export default router
