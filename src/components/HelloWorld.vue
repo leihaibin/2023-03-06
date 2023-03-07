@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <button  @click="toLogin">登入接页面</button>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -31,11 +32,34 @@
 </template>
 
 <script>
+import router from "@/router";
+
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
   }
+,
+methods:{
+  toLogin(){
+ //   alert('提交成功');
+    //直接跳转
+   // router.push('/Login');
+
+    //带参数跳转
+    router.push({path:'/Login',query:{setid:123456}});
+
+  }
+    // this.$refs.loginForm.validate((valid) => {
+    //   if (valid) {
+    //     alert('提交成功');
+    //   } else {
+    //     this.$message.error('登录出错请重新输入');
+    //     return false;
+    //   }
+    // });
+
+}
 }
 </script>
 
