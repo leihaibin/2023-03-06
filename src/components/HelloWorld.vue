@@ -2,9 +2,10 @@
 
   <div class="hello">
     <h1>{{ msg }}</h1>
-
-
+    <router-link to="/home">首页</router-link> |
     <router-link to="/login">登入</router-link>
+
+
     </div>
 <!--    <p>-->
 <!--      For a guide and recipes on how to configure / customize this project,<br>-->
