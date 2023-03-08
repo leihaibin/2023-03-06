@@ -7,11 +7,11 @@ const routes = [
         //name: 'HelloWorld',
         component: Home
     },
-    // {
-    //     path: "/home",
-    //     name: "home",
-    //     component: home
-    // },
+    {
+        path: "/home",
+        name: "home",
+        component: () => import('../views/Home.vue')
+    },
     {
         path: "/login",
         //name: "login",

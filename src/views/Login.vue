@@ -1,5 +1,8 @@
 
 <template>
+  <div >
+    <router-link to="/">首页</router-link>
+  </div>
   <div>
     <el-form :rules="rules" ref="loginForm" :model="loginForm" class="loginContainer">
       <h3 class="loginTitle">
@@ -40,14 +43,12 @@ export default {
       rules:{
         username:[{required:true,message:"请输入用户名",trigger:"blur"},{ min: 5, max: 14, message: '长度在 5 到 14 个字符', trigger: 'blur' }
         ],
-        // eslint-disable-next-line no-sparse-arrays
         password:[{required:true,message:"请输入密码",trigger:"blur"},,{ min: 6,  message: '密码长度要大于6', trigger: 'blur' }],
         code:[{required:true,message:"请输入验证码",trigger:"blur"}],
       }
 
     }
   },
-  // eslint-disable-next-line vue/multi-word-component-names
   name: 'Login',
   props: {
     msg: String
